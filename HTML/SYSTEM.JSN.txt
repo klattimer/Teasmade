@@ -1,0 +1,19 @@
+{
+    "uuid" : "22df1f0c-2a0f-11e3-b93d-0019d10ea2fc",
+    "type" : "teasmade",
+    "methods" : {
+        "makeTea" : [],
+        "setLamp" : ["side", "color", "brightness"],
+        "setTime" : ["time"],
+        "adjustFacetime" : ["seconds"]
+    },
+    "events" : {
+        "teaMade" : ["time"],
+        "teaFail" : ["time"],
+    },
+    "properties" : {
+        "kettlePresent" : "boolean",
+        "teapotPresent" : "boolean",
+        "currentTime"   : "time"
+    }
+}
