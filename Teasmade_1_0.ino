@@ -698,6 +698,10 @@ void loop() {
                       i = j;
                     }
                     String r = request.substring(0,i);
+                    if (r.startsWith("BREW") || request.startsWith("WHEN")) {
+                     client.print(F("HTTP/1.1 418 OK\r\nContent-Type: "));
+                     break;
+                    }
                     decodeRequest(r);
                     bool served = serveFile(client);
                     // Here's where you can do some custom stuff to handle the request
