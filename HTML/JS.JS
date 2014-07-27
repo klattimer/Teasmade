@@ -204,12 +204,12 @@ function AJAXObject() {
 
 function checkStatus() {
     var status = new AJAXObject();
-    status.url = "/METHODS/STATUS";
+    status.url = "/STATUS";
     status.responseType = "json";
     status.callback = function(response) {
         
-    }
-    status.post();
+    };
+    status.send();
 }
 
 function makeTea() {
@@ -218,14 +218,30 @@ function makeTea() {
     tea.responseType = "json";
     tea.callback = function(response) {
         if (response.success == true) {
-            var lights = document.getElementById("lights");
-            lights.style.backgroundColor = "#0082ff";
-            lights.style.opacity = 0.5;
+            setLights(false, "#0482F2");
         } else {
             flashRed(5, 300);
         }
+    };
+    tea.send();
+}
+
+function setLights(on, colour) {
+    var lights = document.getElementById("lights");
+    if (on) {
+        lights.style.opacity = 0.5;
+    } else {
+        lights.style.opacity = 0;
     }
-    tea.post();
+    lights.style.backgroundColor = colour;
+    
+    var lights = new AJAXObject();
+    lights.url = "/METHODS/LIGHTS/0/"+colour;
+    lights.responseType = "json";
+    lights.callback = function(response) {
+        
+    };
+    lights.send();
 }
 
 var lampOn = false;
@@ -233,12 +249,9 @@ var lampOn = false;
 function toggleLamp() {
     lampOn = !lampOn;
     if (lampOn) { 
-        var lights = document.getElementById("lights");
-        lights.style.backgroundColor = "#ffff00";
-        lights.style.opacity = 0.5;
+        setLights(true, "#FFFF00");
     } else {
-        var lights = document.getElementById("lights");
-        lights.style.opacity = 0;
+        setLights(false, "#FFFFFF");
     }
 }
 
@@ -270,6 +283,8 @@ function flashWhite(times, delay) {
 
 window.onload = function () {
     setInterval(updateClock, 1000);
+    checkStatus();
+    setInterval(checkStatus, 10000);
 }
 
 function updateClock() {
