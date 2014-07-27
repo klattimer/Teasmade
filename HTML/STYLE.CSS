@@ -101,7 +101,11 @@ body {
     width: 90px;
     height: 10px;
     position:absolute;
-    background-image: url('CHNDHR.PNG');
+    background-image: url('CHNDSC.PNG');
+    transform: rotateZ(90deg);
+    left: 153px;
+    top: 93px;
+    transform-origin: 70px 50%;
 }
 
 #minutes {
@@ -109,12 +113,20 @@ body {
     height: 10px;
     position:absolute;
     background-image: url('CHNDMN.PNG');
+    transform: rotateZ(90deg);
+    top: 92px;
+    left: 158px;
+    transform-origin: 65px 50%;
 }
 
 #hours {
     width: 50px;
     height: 10px;
     position:absolute;
-    background-image: url('CHNDSC.PNG');
+    background-image: url('CHNDHR.PNG');
+    transform: rotateZ(90deg);
+    left: 178px;
+    top: 93px;
+    transform-origin: 45px 50%;
 }
 
