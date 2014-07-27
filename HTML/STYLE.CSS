@@ -1,7 +1,120 @@
 
 body { 
     font-family: helvetica, sans-serif;
-    color: #00004f;
-    padding: 20px;
-    background-color: #56ff24;
+    margin: 0px;
 }
+
+#container {
+    position:absolute;
+}
+
+#base {
+    background-image: url('BASE.PNG');
+    width:446px;
+    height:103px;
+    position:absolute;
+    top:270px;
+}
+
+#rightbutton {
+    background-image: url('W-OFF-N.PNG');
+    width:28px;
+    height:32px;
+    position:absolute;
+    right: 0px;
+    top: 30px;
+}
+
+
+#rightbutton .pressed {
+    background-image: url('W-OFF-P.PNG');
+}
+
+#rightbutton .illuminated {
+    background-image: url('W-ON-N.PNG');
+}
+
+
+#rightbutton .illuminated.pressed {
+    background-image: url('W-ON-P.PNG');
+}
+
+#leftbutton {
+    background-image: url('R-OFF-N.PNG');
+    width:28px;
+    height:32px;
+    position:absolute;
+    left: 0px;
+    top: 30px;
+}
+
+#leftbutton .pressed {
+    background-image: url('R-OFF-P.PNG');
+}
+
+#leftbutton .illuminated {
+    background-image: url('R-ON-N.PNG');
+}
+
+
+#leftbutton .illuminated.pressed {
+    background-image: url('R-ON-P.PNG');
+}
+
+
+#teapotandkettle {
+    background-image: url('TPOTKTL.PNG');
+    width:470px;
+    height:270px;
+    position:absolute;
+    z-index: -1;
+}
+
+#face {
+    background-image: url('FACE.PNG');
+    width:446px;
+    height:189px;
+    position:absolute;
+    top:81px;
+    opacity:1;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in;
+}
+
+#face:hover {
+    opacity: 0.3;
+}
+
+#lights {
+    background-color: #0000ff;
+    width:446px;
+    height:189px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    -webkit-mask-image: url('FACEMASK.PNG');
+    opacity: 0.5;
+}
+
+#seconds {
+    width: 90px;
+    height: 10px;
+    position:absolute;
+    background-image: url('CHNDHR.PNG');
+}
+
+#minutes {
+    width: 70px;
+    height: 10px;
+    position:absolute;
+    background-image: url('CHNDMN.PNG');
+}
+
+#hours {
+    width: 50px;
+    height: 10px;
+    position:absolute;
+    background-image: url('CHNDSC.PNG');
+}
+

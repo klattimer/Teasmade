@@ -1,12 +1,22 @@
 <html>
-<head>
-<title>This is a teasmade</title>
-<script language="javascript" src="JS.JS"></script>
-<link rel="stylesheet" type="text/css" href="STYLE.CSS" />
-</head>
-<body>
-<h1>Welcome</h1>
-<p>This is the initial test page for the wifi teasmade</p>
-<button onclick="changebackground()">Change Background</button>
-</body>
+    <head>
+        <title>This is a teasmade</title>
+        <script language="javascript" src="JS.JS"></script>
+        <link rel="stylesheet" type="text/css" href="STYLE.CSS" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="base">
+                <div id="rightbutton" onclick="makeTea();"></div>
+                <div id="leftbutton" onclick="toggleLamp();"></div>
+            </div>
+            <div id="face">
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+                <div id="hours"></div>
+                <div id="lights"></div>
+            </div>
+            <div id="teapotandkettle"></div>
+        </div>
+    </body>
 </html>
