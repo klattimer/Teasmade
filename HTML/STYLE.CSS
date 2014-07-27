@@ -26,16 +26,16 @@ body {
 }
 
 
-#rightbutton .pressed {
+#rightbutton.pressed {
     background-image: url('W-OFF-P.PNG');
 }
 
-#rightbutton .illuminated {
+#rightbutton.illuminated {
     background-image: url('W-ON-N.PNG');
 }
 
 
-#rightbutton .illuminated.pressed {
+#rightbutton.illuminated.pressed {
     background-image: url('W-ON-P.PNG');
 }
 
@@ -48,16 +48,16 @@ body {
     top: 30px;
 }
 
-#leftbutton .pressed {
+#leftbutton.pressed {
     background-image: url('R-OFF-P.PNG');
 }
 
-#leftbutton .illuminated {
+#leftbutton.illuminated {
     background-image: url('R-ON-N.PNG');
 }
 
 
-#leftbutton .illuminated.pressed {
+#leftbutton.illuminated.pressed {
     background-image: url('R-ON-P.PNG');
 }
 
@@ -87,14 +87,17 @@ body {
 }
 
 #lights {
-    background-color: #0000ff;
+    background-color: #FFFFFF;
     width:446px;
     height:189px;
     position:absolute;
     top:0px;
     left:0px;
     -webkit-mask-image: url('FACEMASK.PNG');
-    opacity: 0.5;
+    opacity: 0;
+    -webkit-transition-property: opacity, background-color;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in;
 }
 
 #seconds {

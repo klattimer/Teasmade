@@ -593,6 +593,11 @@ boolean handleAction(WiFiClient client) {
       client.print(F("true, "));
     else
       client.print(F("false,"));
+    client.print(F("\"teasMade\" : "));
+    if (teasmade)
+      client.print(F("true, "));
+    else
+      client.print(F("false,"));
     client.print(F("\"leftColour\" : \"#"));
     PrintHex8(client, left_r);
     PrintHex8(client, left_g);
