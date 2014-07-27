@@ -1,5 +1,4 @@
 window.onload = function () {
-    updateClock();
     setInterval(updateClock, 1000);
 }
 
@@ -20,12 +19,12 @@ function updateClock() {
     var anh = (((ch / 12.0) * 360) + 90 + hadj) % 360;
     
     
-    h.style.transform = "rotate("+anh+"deg)";
+    h.style.transform = "rotateZ("+anh+"deg)";
     console.log("Hour angle = "+anh);
     
-    m.style.transform = "rotate("+anm+"deg)";
+    m.style.transform = "rotateZ("+anm+"deg)";
     console.log("Minutes angle = "+anm);
     
-    s.style.transform = "rotate("+ans+"deg)";
+    s.style.transform = "rotateZ("+ans+"deg)";
     console.log("Seconds angle = "+ans);
 }

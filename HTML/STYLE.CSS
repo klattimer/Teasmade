@@ -117,6 +117,10 @@ body {
     top: 92px;
     left: 158px;
     transform-origin: 65px 50%;
+    
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease-in;
 }
 
 #hours {
@@ -128,5 +132,9 @@ body {
     left: 178px;
     top: 93px;
     transform-origin: 45px 50%;
+    
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 1.2s;
+    -webkit-transition-timing-function: ease-in;
 }
 
